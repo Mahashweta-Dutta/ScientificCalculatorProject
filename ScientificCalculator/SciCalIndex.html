@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="ScCalStyle.css">
+</head>
+<body>
+
+<div class="calculator">
+  <input type="text" id="result" readonly>
+
+  <!-- 🔹 Memory Buttons Start -->
+  <div class="memory-buttons">
+    <button onclick="memoryAdd()">M+</button>
+    <button onclick="memorySubtract()">M-</button>
+    <button onclick="memoryRecall()">MR</button>
+    <button onclick="memoryClear()">MC</button>
+  </div>
+  <!-- 🔹 Memory Buttons End -->
+
+  <div class="buttons">
+    <!-- First Row: sin, cos, tan, rad -->
+    <button onclick="appendFunction('Math.sin')">sin</button>
+    <button onclick="appendFunction('Math.cos')">cos</button>
+    <button onclick="appendFunction('Math.tan')">tan</button>
+    <button onclick="toRadians()">rad</button>
+  
+    <!-- Second Row: log, ln, (, ) -->
+    <button onclick="appendFunction('Math.log10')">log</button>
+    <button onclick="appendFunction('Math.log')">ln</button>
+    <button onclick="appendValue('(')">(</button>
+    <button onclick="appendValue(')')">)</button>
+  
+    <!-- Third Row: C, ⌫, √, ÷ -->
+    <button onclick="factorial()">x!</button>
+    <button onclick="power()">xʸ</button>
+    <button onclick="appendFunction('Math.sqrt')">√</button>
+    <button onclick="percent()">%</button>
+    
+    <!-- Fourth Row: 7,8,9,× -->
+    <button onclick="appendValue('7')">7</button>
+    <button onclick="appendValue('8')">8</button>
+    <button onclick="appendValue('9')">9</button>
+    <button onclick="appendValue('/')">÷</button>
+    
+    <!-- Fifth Row: 4,5,6,− -->
+    <button onclick="appendValue('4')">4</button>
+    <button onclick="appendValue('5')">5</button>
+    <button onclick="appendValue('6')">6</button>
+    <button onclick="appendValue('*')">×</button>
+    
+    <!-- Sixth Row: 1,2,3,+ -->
+    <button onclick="appendValue('1')">1</button>
+    <button onclick="appendValue('2')">2</button>
+    <button onclick="appendValue('3')">3</button>
+    <button onclick="appendValue('-')">−</button>
+    
+    <!-- Seventh Row: 0, ., π, e -->
+    <button onclick="appendValue('Math.E')">e</button>
+    <button onclick="appendValue('0')">0</button>
+    <button onclick="appendValue('.')">.</button>
+    <button onclick="appendValue('+')">+</button>
+    
+    
+    <!-- Eighth Row: xʸ, x!, %, = -->
+    <button onclick="appendValue('Math.PI')">π</button>
+    <button onclick="clearResult()">C</button>
+    <button onclick="deleteLast()">⌫</button>
+    <button onclick="calculate()">=</button>
+  </div>
+</div>
+
+<script src="ScCalScript.js"></script>
+
+</body>
+</html>
